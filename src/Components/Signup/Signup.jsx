@@ -13,7 +13,12 @@ const Signup = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        if(!email || !username || !phoneNumber || !password || !profession) {
+            return toast.error('All fields are required');
+        }
+        if(phoneNumber.length !== 10) {
+            return toast.error('Phone number must be 10 digits');
+        }
         const signupPromise = axios.post(`${import.meta.env.VITE_API_LOCAL_URL}/auth/register`, {
             email: email,
             username: username,
@@ -54,7 +59,6 @@ const Signup = () => {
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            required
                         />
                     </div>
                     <div className="form-group">
@@ -64,17 +68,15 @@ const Signup = () => {
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            required
                         />
                     </div>
                     <div className="form-group">
                         <label>Phone Number:</label>
                         <input
                             id='phNumberr'
-                            type="tel"
+                            type="number"
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
-                            required
                         />
                     </div>
                     <div className="form-group">
@@ -85,7 +87,6 @@ const Signup = () => {
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            required
                         />
                     </div>
                     <div className="form-group">
