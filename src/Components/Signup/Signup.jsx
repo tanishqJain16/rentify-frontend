@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Signup.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import toast  from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -50,6 +50,7 @@ const Signup = () => {
                     <div className="form-group">
                         <label>Email:</label>
                         <input
+                            className='email'
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -59,24 +60,30 @@ const Signup = () => {
                     <div className="form-group">
                         <label>Username:</label>
                         <input
+                            className='username'
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
+                            autoComplete='off'
                             required
                         />
                     </div>
                     <div className="form-group">
                         <label>Phone Number:</label>
                         <input
+                            className='phNumber'
                             type="tel"
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
+                            autoComplete='off'
                             required
                         />
                     </div>
                     <div className="form-group">
                         <label>Password:</label>
                         <input
+                            className='password'
+                            autoComplete='off'
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
@@ -85,7 +92,7 @@ const Signup = () => {
                     </div>
                     <div className="form-group">
                         <label>Profession:</label>
-                        <select name="profession" id="profession" onChange={(e) => setProfession(e.target.value)}>
+                        <select name="profession" className='profession' id="profession" onChange={(e) => setProfession(e.target.value)}>
                             <option value="buyer">Buyer</option>
                             <option value="seller">Seller</option>
                         </select>
