@@ -46,7 +46,7 @@ const Signup = () => {
         <div className="signup-container">
             <div className="signupCard">
                 <h2>Signup</h2>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} autoComplete='off'>
                     <div className="form-group">
                         <label>Email:</label>
                         <input
@@ -64,7 +64,6 @@ const Signup = () => {
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            autoComplete='off'
                             required
                         />
                     </div>
@@ -75,7 +74,6 @@ const Signup = () => {
                             type="tel"
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
-                            autoComplete='off'
                             required
                         />
                     </div>
@@ -83,7 +81,6 @@ const Signup = () => {
                         <label>Password:</label>
                         <input
                             id='password'
-                            autoComplete='off'
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
