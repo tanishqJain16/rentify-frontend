@@ -50,7 +50,7 @@ const Signup = () => {
                     <div className="form-group">
                         <label>Email:</label>
                         <input
-                            id='email'
+                            id='emaill'
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -60,7 +60,7 @@ const Signup = () => {
                     <div className="form-group">
                         <label>Username:</label>
                         <input
-                            id='username'
+                            id='usernamee'
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
@@ -70,7 +70,7 @@ const Signup = () => {
                     <div className="form-group">
                         <label>Phone Number:</label>
                         <input
-                            id='phNumber'
+                            id='phNumberr'
                             type="tel"
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
@@ -80,7 +80,7 @@ const Signup = () => {
                     <div className="form-group">
                         <label>Password:</label>
                         <input
-                            id='password'
+                            id='passwordd'
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
