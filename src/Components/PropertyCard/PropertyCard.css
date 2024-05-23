@@ -1,0 +1,204 @@
+.propertyCard{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: fit-content;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+}
+
+.propertyCard>img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.propertyDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: 1rem;
+}
+
+.flatType{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem
+}
+
+.propertyDetails>div>p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.deleteProperty{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+}
+
+.deleteProperty>svg{
+    color: #ff6b6b;
+    transition: all 0.3s;
+}
+
+.deleteProperty>svg:hover{
+    cursor: pointer;
+    scale: 1.5;
+}
+.showDetail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.showDetail>button{
+    padding: 0.5rem 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ff6b6b;
+}
+
+.showDetail>button:hover{
+    background-color: white;
+    color: #ff6b6b;
+}
+
+.modalImage{
+    width: 20rem;
+    border-radius: 10px;
+}
+
+.detailedDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.detailedDetails>.propertyType{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.detailedDetails>.propertyBasics{
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.attributes{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.attributes>div{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.attributes>div>strong>svg{
+    color: #F76262;
+    font-size: 1.5rem;
+}
+
+.editPropertyBtn{
+    padding: 0.5rem 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.editPropertyBtn:hover{
+    background-color: #4e5801;
+    color: white;
+}
+
+.deleteBtns{
+    display: flex;
+    gap: 1rem;
+}
+
+.deleteBtns>button{
+    padding: 0.5rem 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid #ff6b6b;
+}
+
+.deleteBtns>.deleteYesBtn:hover{
+    background-color: white;
+    color: #ff6b6b;
+}
+
+.deleteBtns>.deleteNoBtn{
+    background-color: white;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+.deleteBtns>.deleteNoBtn:hover{
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.ownerDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ownerDetails>div{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.ownerDetails>div>svg{
+    color: #F76262;
+    font-size: 1.5rem;
+}
+
+.ownerDetails>.emailDetailsBtn{
+    padding: 0.5rem 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid #ff6b6b;
+    margin-top: 1rem;
+}
+
+.ownerDetails>.emailDetailsBtn:hover{
+    background-color: white;
+    color: #ff6b6b;
+}
+
