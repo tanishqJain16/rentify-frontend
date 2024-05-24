@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./PropertyCard.css";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import { useDeletePropertyMutation, useGetUserPropertyQuery, useUpdatePropertyMutation } from '../../Services/PropertyDetails';
+import { useDeletePropertyMutation, useGetUserPropertyQuery, useSendEmailMutation, useUpdatePropertyMutation } from '../../Services/PropertyDetails';
 import { Box, Modal, Typography } from '@mui/material';
 import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
 import BathtubOutlinedIcon from '@mui/icons-material/BathtubOutlined';
@@ -137,6 +137,8 @@ function PropertyCard(props) {
         p: 4,
     };
 
+    const [sendEmail, { data: sendEmailData, error: sendEmailError, isLoading: sendEmailIsLoading, isSuccess: sendEmailIsSuccess, isError: sendEmailIsError }] = useSendEmailMutation();
+
     const formatNumberToRupeesFormat = (number) => {
         return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
     };
@@ -200,6 +202,31 @@ function PropertyCard(props) {
         return `+91 ${numberStr.slice(0, 5)}-${numberStr.slice(5)}`;
     }
 
+    const handleSendEmail = () => {
+        toast.promise(
+            sendEmail({ 
+                senderEmail: localStorage.getItem('email'),
+                message:{
+                    email: props?.property?.propertyOwnerEmail,
+                    phNumber: props?.property?.propertyOwnerPhNumber,
+                    name: props?.property?.propertyOwner,
+                }
+             }).unwrap()
+                .then((response) => {
+                    closeDetailsModalFun();
+                    return response.message;
+                })
+                .catch((error) => {
+                    throw new Error(error.data.message);
+                }),
+            {
+                loading: 'Sending email...',
+                success: 'Email sent to registered email ID!',
+                error: 'Failed to send email. Please try again.',
+            }
+        );
+    }
+
     return (
         <div className='propertyCard'>
             <Modal
@@ -226,7 +253,7 @@ function PropertyCard(props) {
                             <LocalPhoneOutlinedIcon />
                             {formatIndianPhoneNumber(props?.property?.propertyOwnerPhNumber)}
                            </div>
-                           <button className="emailDetailsBtn">
+                           <button className="emailDetailsBtn" onClick={handleSendEmail}>
                             Email details
                            </button>
                         </div>

@@ -6,6 +6,7 @@ import PropertyCard from '../../Components/PropertyCard/PropertyCard';
 import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 import { Box, Modal, Slider, Typography } from '@mui/material';
 import toast from 'react-hot-toast';
+import noData from "../../assets/noData.webp"
 
 function PropertyListingBuyer() {
     const { data, error, isError, isLoading, isSuccess } = useGetAllPropertyQuery();
@@ -20,6 +21,16 @@ function PropertyListingBuyer() {
             setSortedProperties(data.data);
         }
     }, [data]);
+
+    useEffect(() => {
+        if (isLoading) {
+            toast.loading('Fetching Registered properties...', { id: 'fetchingProperties' });
+        } else if (isError) {
+            toast.error('Failed to fetch properties', { id: 'fetchingProperties' });
+        } else if (isSuccess) {
+            toast.success('Properties fetched successfully', { id: 'fetchingProperties' });
+        }
+    }, [isLoading, isError, isSuccess]);
 
     const closeFilterModalFun = () => {
         setOpenFilterModel(false);

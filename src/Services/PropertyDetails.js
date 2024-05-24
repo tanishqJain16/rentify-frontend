@@ -56,7 +56,18 @@ export const propertyDetailsApi = createApi({
                 body: body.body,
             }),
         }),
+        sendEmail: builder.mutation({
+            query: (body) => ({
+                url: '/sendEmail',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                },
+                body: body,
+            }),
+        }),
     }),
 });
 
-export const { useAddPropertyMutation, useGetUserPropertyQuery, useDeletePropertyMutation, useUpdatePropertyMutation, useGetAllPropertyQuery } = propertyDetailsApi;
+export const { useAddPropertyMutation, useGetUserPropertyQuery, useDeletePropertyMutation, useUpdatePropertyMutation, useGetAllPropertyQuery, useSendEmailMutation } = propertyDetailsApi;

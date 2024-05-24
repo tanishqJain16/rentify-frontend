@@ -32,9 +32,20 @@ function PropertyListingSeller() {
     };
 
     const [addProperty, { data, error, isLoading, isSuccess }] = useAddPropertyMutation();
-    const { data: propertiesData, error: propertiesError, isLoading: propertiesLoading, refetch: refetchProperties } = useGetUserPropertyQuery({
+    const { data: propertiesData, error: propertiesError, isLoading: propertiesLoading, refetch: refetchProperties, isError: propertiesIsError, isSuccess: propertiesIsSuccess } = useGetUserPropertyQuery({
         email: localStorage.getItem('email')
     });
+
+    useEffect(() => {
+        if (propertiesLoading) {
+            toast.loading('Fetching Registered properties...', { id: 'fetchingProperties' });
+        } else if (propertiesIsError) {
+            toast.error('Failed to fetch properties', { id: 'fetchingProperties' });
+        } else if (propertiesIsSuccess) {
+            toast.success('Properties fetched successfully', { id: 'fetchingProperties' });
+        }
+    }, [propertiesLoading, propertiesIsError, propertiesIsSuccess]);
+
 
     useEffect(() => {
         console.log(body);
