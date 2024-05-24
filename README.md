@@ -41,7 +41,7 @@ Rentify is a Real Estate Property Listing web application designed to help users
 
 You can access the deployed Rentify application using the following link:
 
-[Real Estate Property Listing](https://rentify-woad.vercel.app/)
+[Rentify App](https://rentify-woad.vercel.app/)
 
 ### Authentication
 
