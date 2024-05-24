@@ -1,8 +1,8 @@
-# Real Estate Property Listing
+# Rentify - Real Estate Property Listing
 
 ## Overview
 
-This project is a Real Estate Property Listing web application called Rentify, designed to simplify the process of finding rental properties. Rentify allows users to browse, filter, and sort through various rental properties based on their preferences. The application offers authentication functionality for users to securely log in and manage their rental properties. With Rentify, buyers can easily discover available properties, view detailed information, and contact property owners or agents. Sellers, on the other hand, can list, update, and delete their rental properties with ease.
+Rentify is a Real Estate Property Listing web application designed to help users find rental properties easily. The application provides a platform where users can browse, filter, and sort through various rental properties based on their preferences. With Rentify, users can quickly discover available properties, view detailed information, and connect with property owners or agents. The application offers authentication functionality, allowing users to securely log in and manage their rental properties. Whether you're a potential tenant searching for the perfect rental or a property owner looking to list your properties, Rentify makes the process simple and efficient.
 
 ## Project Structure
 
