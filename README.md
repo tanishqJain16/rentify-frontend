@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Real Estate Property Listing web application that allows users to view, filter, and sort listed properties. The application includes authentication functionality, enabling users to log in and log out. Buyers can filter properties by price range and location, while sellers can add, update, and delete their properties. The application is built using React with Vite for the development server, and backend services providing property data.
+This project is a Real Estate Property Listing web application called Rentify, designed to simplify the process of finding rental properties. Rentify allows users to browse, filter, and sort through various rental properties based on their preferences. The application offers authentication functionality for users to securely log in and manage their rental properties. With Rentify, buyers can easily discover available properties, view detailed information, and contact property owners or agents. Sellers, on the other hand, can list, update, and delete their rental properties with ease.
 
 ## Project Structure
 
@@ -10,8 +10,8 @@ This project is a Real Estate Property Listing web application that allows users
 
 - **LoginPage**: Handles user authentication.
 - **SignUpPage**: Allows new users to create an account.
-- **PropertyListingBuyer**: Displays all listed properties to buyers with options to filter and sort the listings.
-- **PropertyListingSeller**: Allows sellers to view, add, update, and delete their properties.
+- **PropertyListingBuyer**: Displays all listed properties to potential tenants with options to filter and sort the listings.
+- **PropertyListingSeller**: Allows property owners or agents to view, add, update, and delete their rental properties.
 - **PropertyCard**: Displays individual property details.
 
 ### Services
@@ -26,11 +26,11 @@ This project is a Real Estate Property Listing web application that allows users
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/real-estate-listing.git
+    git clone https://github.com/tanishqJain16/rentify-frontend.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd real-estate-listing
+    cd rentify-frontend
     ```
 3. Install dependencies:
     ```sh
@@ -39,9 +39,9 @@ This project is a Real Estate Property Listing web application that allows users
 
 ## Usage
 
-You can access the deployed project using the following link:
+You can access the deployed Rentify application using the following link:
 
-[Real Estate Property Listing](http://example.com)  <!-- Replace with your actual deployed link -->
+[Real Estate Property Listing](https://rentify-woad.vercel.app/)
 
 ### Authentication
 
@@ -50,33 +50,33 @@ You can access the deployed project using the following link:
 
 ### Buyer Interface
 
-1. **View Properties**: All listed properties are displayed.
-2. **Filter Properties**: Buyers can filter properties by price range and location.
-3. **Sort Properties**: Buyers can sort properties by price (low to high, high to low).
+1. **View Properties**: All listed rental properties are displayed.
+2. **Filter Properties**: Tenants can filter properties by price range and location.
+3. **Sort Properties**: Tenants can sort properties by price (low to high, high to low).
+4. **Contact Property Owner**: Buyers can view contact details of the property owner and email the details to their registered email address.
 
 ### Seller Interface
 
-1. **View Listed Properties**: Sellers can view properties they have listed.
-2. **Add New Property**: Sellers can add new properties by providing details such as type, location, price, area, and other relevant information.
-3. **Update Property**: Sellers can update details of their listed properties.
-4. **Delete Property**: Sellers can delete their listed properties.
+1. **View Listed Properties**: Property owners or agents can view properties they have listed for rent.
+2. **Add New Property**: Owners can add new rental properties by providing necessary details.
+3. **Update Property**: Owners can update details of their listed properties.
+4. **Delete Property**: Owners can delete their listed properties.
 
 ## Application Flow
 
 1. **Authentication**: 
-   - Users must log in or sign up to access the application.
-   - Upon successful login, the user's profession (buyer or seller) determines their interface.
+   - Users must log in or sign up to access the Rentify application.
+   - Upon successful login, the user's role (tenant or property owner) determines their interface.
 
 2. **Buyer Flow**:
-   - Buyers can view all properties listed.
-   - They can apply filters to narrow down properties by price and location.
+   - Tenants can browse through available rental properties.
+   - They can apply filters to narrow down properties based on their preferences.
    - Sorting options are available to arrange properties based on price.
 
 3. **Seller Flow**:
-   - Sellers can view properties they have listed.
-   - They can add new properties by providing necessary details.
-   - Sellers can update or delete their properties as needed.
-   - Sellers can log out from their account.
+   - Owners or agents can view properties they have listed for rent.
+   - They can add new properties, update existing ones, or delete properties as needed.
+   - Property owners can log out from their account.
 
 ## Technologies Used
 
@@ -89,8 +89,8 @@ You can access the deployed project using the following link:
 
 ## Contributing
 
-If you would like to contribute to this project, please fork the repository and create a pull request with your changes. Ensure your code follows the project's style guidelines and includes relevant tests.
+If you would like to contribute to Rentify, please fork the repository and create a pull request with your changes. Ensure your code follows the project's style guidelines and includes relevant tests.
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more information.
+Rentify is licensed under the MIT License. See the LICENSE file for more information.
